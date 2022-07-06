@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Zanzibar</string>
+    <string name="player1">Player1</string>
+    <string name="player2">Player2</string>
+    <string name="score">Score:</string>
+    <string name="current_score">Current score is:</string>
+    <string name="first_player_roll_button">Roll</string>
+
+</resources>

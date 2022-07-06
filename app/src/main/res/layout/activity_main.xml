@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/TVplayerone"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="@string/player1"
+    android:layout_marginStart="30dp"
+    style="@style/text_view_style" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVplayertwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="45dp"
+        android:text="@string/player2"
+        style="@style/text_view_style"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TVplayeronescore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TVplayerone"
+        android:layout_marginStart="30dp"
+        android:text="@string/score"
+        style="@style/Text_view_score_style"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Tvplayerwtoscore"
+        app:layout_constraintTop_toBottomOf="@id/TVplayertwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/score"
+        android:layout_marginEnd="60dp"
+        style="@style/Text_view_score_style"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PlOneScore"
+        app:layout_constraintStart_toEndOf="@id/TVplayeronescore"
+        app:layout_constraintTop_toBottomOf="@id/TVplayerone"
+        style="@style/score" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PlTwoScore"
+        app:layout_constraintStart_toEndOf="@id/Tvplayerwtoscore"
+        app:layout_constraintTop_toBottomOf="@id/TVplayertwo"
+        style="@style/score"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TvCurrentScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/current_score"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        android:textSize="30sp"
+        android:textColor="#EDD927"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TvCurrentScoreNumber"
+        app:layout_constraintStart_toEndOf="@id/TvCurrentScore"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        android:textSize="30sp"
+        android:textColor="#EDD927"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/IVfirstDice"
+        app:layout_constraintTop_toBottomOf="@id/TvCurrentScoreNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="120dp"
+        android:contentDescription="TODO" />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/IVsecondDice"
+        app:layout_constraintTop_toBottomOf="@id/TvCurrentScoreNumber"
+        app:layout_constraintStart_toStartOf="@id/IVfirstDice"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="TODO" />
+    
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/BfirstPlayaerRoll"
+        app:layout_constraintTop_toBottomOf="@id/IVfirstDice"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/first_player_roll_button"
+        android:background="@drawable/text_view_background"
+        android:textSize="20sp"
+        android:textColor="#DEED4B"
+        />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/BsecondPlayaerRoll"
+        app:layout_constraintTop_toBottomOf="@id/IVsecondDice"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/first_player_roll_button"
+        android:background="@drawable/text_view_background"
+        android:textSize="20sp"
+        android:textColor="#DEED4B"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/winner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BfirstPlayaerRoll"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:textColor="#36E80D"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/IVwinningpicture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/winner"
+        android:layout_marginTop="50dp"
+        android:contentDescription="TODO" />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
