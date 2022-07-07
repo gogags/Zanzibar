@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         var pl1sc = 0
         var pl2sc = 0
         var currentScore = 0
-        val winnerPl1Zanzibar = "Zanzibar Player 1 wins the game"
+        val winnerPl1Zanzibar = "Zanzibar Player 1 wins the game" // ყველა სტრინგი რესურსებში უნნდა იყოს და მერე getString(resId:Int) მეთოდით შემოიტან აპში
         val winnerPl2Zanzibar = "Zanzibar Player 2 wins the game"
         val winnerPl1 = "Player 1 wins the game"
         val winnerpl2 = "Player 2 wins the game"
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 5 -> firstDicePicture.setImageResource(R.drawable.ic_five)
                 6 -> firstDicePicture.setImageResource(R.drawable.ic_six)
             }
-
+                // ამას ცალკე ფუქციაში გავიტანდი fun setCorrectImage(imageView:ImageView, number)  კოდის დუპლიკაციაა ხლა
             when (randomSecondDiceNumber) {
                 1 -> secondDicePivture.setImageResource(R.drawable.ic_one)
                 2 -> secondDicePivture.setImageResource(R.drawable.ic_two)
@@ -111,7 +111,8 @@ class MainActivity : AppCompatActivity() {
                 currentRollScore.text = currentScore.toString()
             }
 
-
+        //ბაგი აქვს თამაშს ავცდი 111 ს დდა არ მიჩვენა მოგება
+            //წყვილების გაგორების ლოგიკა არ დევს
 
         }
         if(pl2sc >= 111){
